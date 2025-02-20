@@ -5,7 +5,7 @@ import org.example.factorymethod.User;
 
 public class KakaoUserFactory extends AbstractUserFactory {
     @Override
-    protected User createUser() {
-        return new KakaoUser();
+    protected User createUser(final User user) {
+        return new KakaoUser(user);
     }
 }

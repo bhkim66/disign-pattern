@@ -19,16 +19,12 @@ public class UserService {
         );
     }
 
-    public User makeUser(String userType) {
+    public User makeUser(final String userType, final User user) {
         return factoryMap.getOrDefault(userType, new AbstractUserFactory() {
             @Override
-            protected User createUser() {
+            protected User createUser(User user) {
                 throw new IllegalArgumentException("존재하지 않는 타입");
             }
-        }).createOperation();
-    }
-
-    public void test() {
-        NaverUser naverUser = new NaverUser();
+        }).createOperation(user);
     }
 }

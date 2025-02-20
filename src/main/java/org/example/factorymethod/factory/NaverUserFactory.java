@@ -5,7 +5,7 @@ import org.example.factorymethod.User;
 
 public class NaverUserFactory extends AbstractUserFactory {
     @Override
-    protected User createUser() {
-        return new NaverUser();
+    protected User createUser(final User user) {
+        return new NaverUser(user);
     }
 }

@@ -1,8 +1,14 @@
 package org.example.factorymethod;
 
-public abstract class User {
-    protected String name;
+public class User {
+    private String id;
+    private String name;
+    private int age;
 
-    abstract void makeUser(final String name);
+    public User(User user) {
+        this.id = user.id;
+        this.name = user.name;
+        this.age = user.age;
+    }
 }
 
