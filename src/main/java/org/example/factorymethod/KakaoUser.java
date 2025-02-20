@@ -1,7 +1,7 @@
 package org.example.factorymethod;
 
 public class KakaoUser extends User {
-    public KakaoUser(User user) {
-        super(user);
+    public KakaoUser(String id, String name, int age) {
+        super(id, name, age);
     }
 }
